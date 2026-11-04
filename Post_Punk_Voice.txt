@@ -1,0 +1,6 @@
+POST-PUNK VOICE
+EQ: Low -2 dB, Mid +1 dB, High -2 dB
+Compression: -18 dB threshold, 3:1
+Chorus: 20% wet
+Delay: 12% wet
+Reverb: 2.2 s, 20% wet.

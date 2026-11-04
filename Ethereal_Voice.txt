@@ -1,0 +1,6 @@
+ETHEREAL VOICE
+EQ: Low -2 dB, Mid -2 dB, High -5 dB
+Chorus: 40% wet
+Delay: 25% wet
+Reverb: 7.5 s, 42% wet
+Wide, distant and ghostly.

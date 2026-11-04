@@ -1,0 +1,18 @@
+DELIRIUMT VOCALS — GENERAR EL INSTALADOR
+
+Este paquete aún no contiene el .exe compilado. Para generarlo en Windows 10/11 x64:
+
+1) Instala Visual Studio 2022 y marca "Desarrollo para el escritorio con C++".
+2) Instala CMake 3.22 o superior.
+3) Instala Git.
+4) Instala Inno Setup 6.
+5) Extrae el ZIP completo en una carpeta local.
+6) Haz doble clic en BUILD_WINDOWS.bat.
+7) La primera configuración descarga JUCE desde GitHub; requiere internet.
+8) Si la compilación termina correctamente, el instalador aparecerá en:
+   Installer\Output\DeliriumT_Vocals_Windows_x64_Setup.exe
+9) Ejecuta el instalador y luego en FL Studio usa:
+   Options > Manage plugins > Find installed plugins.
+
+Si el proceso falla, conserva el texto de error de la ventana para poder corregirlo.
+No distribuyas el plugin hasta probarlo con audio real en FL Studio.

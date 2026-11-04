@@ -1,0 +1,5 @@
+DEATHROCK EDGE
+EQ: Low +1 dB, Mid +2 dB, High -3 dB
+Compression: -16 dB threshold, 5:1
+Saturation: 7 dB drive, 35% wet
+Reverb: 16% wet.

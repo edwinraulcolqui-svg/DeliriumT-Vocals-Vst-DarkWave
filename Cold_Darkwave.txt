@@ -1,0 +1,6 @@
+COLD DARKWAVE
+EQ: Low -3 dB, Mid 0 dB, High -4 dB
+Compression: -24 dB threshold, 4:1
+Chorus: 0.35 Hz, 32% wet
+Delay: 380 ms, 16% wet
+Reverb: 4.2 s, 28% wet.

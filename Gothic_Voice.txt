@@ -1,0 +1,5 @@
+GOTHIC VOICE
+EQ: Low -1 dB, Mid +1 dB, High -2 dB
+Compression: -20 dB threshold, 3:1
+Reverb: 2.8 s, 22% wet
+Dark, intimate, close vocal.

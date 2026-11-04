@@ -1,0 +1,46 @@
+name: Build DeliriumT Vocals (Windows VST3)
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure x64 Release
+        run: cmake -S . -B build -A x64 -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build VST3
+        run: cmake --build build --config Release --target DeliriumTVocals_VST3
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+
+      - name: Compile Windows installer
+        shell: pwsh
+        run: |
+          $iss = Resolve-Path "Installer/DeliriumT_Vocals.iss"
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" $iss
+          if ($LASTEXITCODE -ne 0) { throw "Inno Setup failed" }
+
+      - name: Verify build outputs
+        shell: pwsh
+        run: |
+          $vst3 = "build/DeliriumTVocals_artefacts/Release/VST3/DeliriumT Vocals.vst3"
+          $exe = "Installer/Output/DeliriumT_Vocals_Windows_x64_Setup.exe"
+          if (!(Test-Path $vst3)) { throw "VST3 bundle not found: $vst3" }
+          if (!(Test-Path $exe)) { throw "Installer not found: $exe" }
+
+      - name: Upload VST3 and installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: DeliriumT-Vocals-Windows-x64
+          path: |
+            build/DeliriumTVocals_artefacts/Release/VST3/**
+            Installer/Output/*.exe

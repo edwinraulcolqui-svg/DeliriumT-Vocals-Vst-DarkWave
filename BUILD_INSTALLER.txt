@@ -1,0 +1,5 @@
+1. Build the VST3 using the README instructions.
+2. Install Inno Setup 6.
+3. Open DeliriumT_Vocals.iss in Inno Setup Compiler.
+4. Compile. The installer EXE is created in Installer/Output.
+5. Test installation and plugin scan in FL Studio before distributing.
